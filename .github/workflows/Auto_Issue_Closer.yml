@@ -1,15 +1,17 @@
-name: Close issues related to a merged pull request based on master branch.
+# Written By XZANATOL
+name: Auto Issue Closer on Merge
 
 on:
   pull_request:
+    # Will trigger on closed PRs
     types: [closed]
-    branches:
-      - master
 
 jobs:
-  closeIssueOnPrMergeTrigger:
+  Close_Issue:
 
     runs-on: ubuntu-latest
+    # Checks if PR is merged (subflag)
+    if: ${{ github.event.pull_request.merged == true }}
 
     steps:
       - name: Closes issues related to a merged pull request.
