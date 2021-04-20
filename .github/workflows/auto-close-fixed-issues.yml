@@ -7,7 +7,7 @@ jobs:
   close:
     runs-on: ubuntu-latest
     steps:
-      - uses: AB-san/auto-close-fixed-issues@v1
+      - uses: AB-san/auto-close-fixed-issues@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # optional comment
