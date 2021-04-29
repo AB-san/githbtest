@@ -2,7 +2,7 @@ name: Auto_Response_on_PR_Merge
 
 on:
   pull_request_target:
-    types: [closed]
+    types: [merged]
 
 jobs:
   auto-response:
